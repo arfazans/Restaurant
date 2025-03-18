@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  text-align: center;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+#head{
+  text-align: center;
+  color: white;
+  text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#boxes{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+ padding-bottom: 3rem;
+ margin-bottom: 3rem;
+
+}
+
+/* #icon1 , #icon2, #icon3{
+  color: #6e8efb;
+} */
+
+#container1{
+  padding: 3rem;
+  color: white;
+  width: 20rem;
+  background-color: white;
+  height: max-content;
+  border: 1px solid rgba(205, 170, 125, 0.4);
+  border-radius: 10%;
+  background-color: rgba(15, 15, 15, 0.75);
+}
+
+#info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#container2{
+  padding: 3rem;
+  width: 20rem;
+  background-color: white;
+  color: white;
+  height: max-content;
+  border-radius: 10%;
+  border: 1px solid rgba(205, 170, 125, 0.4);
+  background-color: rgba(15, 15, 15, 0.75);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border: none;
+  border-bottom: solid white 1px;
+  width: 100%;
+  margin-bottom: 0.7rem;
+  background-color: black ;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  color: white;
+  border: none;
+  text-align: center;
+}
+#message{
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#btn{
+  border: none;
+  border-radius: 2rem;
+  /* background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white; */
+  font-size: larger;
+  width: 8rem;
+  align-self: center;
+}
+#btn:hover{
+  font-size: x-large;
+}
+
+
+.stickyfooter{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  background-color: #c4703f;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+.stickyfooter ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 100%; /* Aligns items vertically in the footer */
+}
+
+.stickyfooter ul li{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+.stickyfooter ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+.stickyfooter ul li a:hover{
+  font-size: larger;
+  color: white;
+}
