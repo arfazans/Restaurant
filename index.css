@@ -90,17 +90,47 @@ nav img{
     align-items: center;
     flex-direction: column;
   }
-  .Menus{
+
   
- margin: 2.5rem 0 2.5rem 0;
-  }
-  .one{
+  .one1{
+    margin: 2.5rem 0 2.5rem 0;
     background-color: #c4b3a9;
     width: 50vw;
     height: max-content;
 
   }
-  .one .photo{
+  .one2{
+    margin: 2.5rem 0 2.5rem 0;
+    background-color: #c4b3a9;
+    width: 50vw;
+    height: max-content;
+
+  }
+  .one3{
+    margin: 2.5rem 0 2.5rem 0;
+    background-color: #c4b3a9;
+    width: 50vw;
+    height: max-content;
+
+  }
+  .one4{
+    margin: 2.5rem 0 2.5rem 0;
+    background-color: #c4b3a9;
+    width: 50vw;
+    height: max-content;
+
+  }
+  .one5{
+    margin: 2.5rem 0 2.5rem 0;
+    background-color: #c4b3a9;
+    width: 50vw;
+    height: max-content;
+
+  }
+
+
+
+  .photo1{
     background-image: url(1.jpg);
     width: 50vw;
     height: 60vh;
@@ -109,18 +139,54 @@ nav img{
    background-position: center;
    border: 2px solid black;
   }
+  .photo2{
+    background-image: url(2.jpg);
+    width: 50vw;
+    height: 60vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border: 2px solid black;
+  }
+   .photo3{
+    background-image: url(3.jpg);
+    width: 50vw;
+    height: 60vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border: 2px solid black;
+  }
+   .photo4{
+    background-image: url(4.jpg);
+    width: 50vw;
+    height: 60vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border: 2px solid black;
+  }
+   .photo5{
+    background-image: url(5.jpg);
+    width: 50vw;
+    height: 60vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border: 2px solid black;
+  }
 
-  .one .info {
+  .info {
     object-fit: contain;
     text-align: center;
   }
 
-  .one .info h2{
+  .info h2{
     line-height: 1.5rem;
     letter-spacing: 0.5rem;
     margin-top: 1rem;
   }
-  .one .info h6{
+   .info h6{
     margin-top: 1rem;
 /* line-height: 0.5rem;
 letter-spacing: 0.4rem;
@@ -225,11 +291,23 @@ button:hover{
   }
 }
 
-.photo, .info {
+.photo1,.photo2,.photo3,.photo4,.photo5,.info {
   opacity: 0;
 }
 
-.photo.showright {
+.photo1.showright {
+  animation: slideright 1s ease-out forwards;
+}
+.photo2.showright {
+  animation: slideright 1s ease-out forwards;
+}
+.photo3.showright {
+  animation: slideright 1s ease-out forwards;
+}
+.photo4.showright {
+  animation: slideright 1s ease-out forwards;
+}
+.photo5.showright {
   animation: slideright 1s ease-out forwards;
 }
 

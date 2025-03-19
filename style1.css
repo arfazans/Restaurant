@@ -134,13 +134,8 @@ input{
 }
 
 
-@media screen and (min-width:500px) {
+ @media   (max-width:768px) {
   #boxes{
     flex-direction: column;
-  }
-}
-@media screen and (max-width:501px) {
-  #boxes{
-    flex-direction: row;
   }
 }
