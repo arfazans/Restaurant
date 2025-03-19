@@ -4,40 +4,55 @@ body , html{
     font-family: 'Open Sans', sans-serif;
 }
 
-#background-image{
-    background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    filter: contrast(1.1);
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 
 #about-container{
+  background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  /* position: absolute; */
+  /* top: 0; */
+  filter: contrast(1.1);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
+    /* display: inline-block; */
+    padding: 5rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
 }
 
 #about-content{
-    width: 65%;
+    width: 50vw;
     color: white;
-    max-width: 700px;
     background-color: rgba(15, 15, 15, 0.75);
     border-radius: 8px;
     border: 1px solid rgba(205, 170, 125, 0.4);
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: max-content;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  /* margin: 2rem 0 5rem 10rem; */
 }
 
 #about-content p{
+    line-height: 1.5;
+    font-size: 20px;
+}
+#about-content2{
+    width: 50vw;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.75);
+    border-radius: 8px;
+    border: 1px solid rgba(205, 170, 125, 0.4);
+  height: max-content;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  /* margin: 2rem 0 5rem 30rem; */
+}
+
+#about-content2 p{
     line-height: 1.5;
     font-size: 20px;
 }
@@ -76,3 +91,18 @@ body , html{
     font-size: larger;
     color: white;
   }
+
+  /* @media screen and (min-width:500px) {
+    #about-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      flex-direction: column;
+    }
+
+    #about-content{
+      max-width: 80vw;
+
+    }
+  } */

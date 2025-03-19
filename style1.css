@@ -132,3 +132,15 @@ input{
   font-size: larger;
   color: white;
 }
+
+
+@media screen and (min-width:500px) {
+  #boxes{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:501px) {
+  #boxes{
+    flex-direction: row;
+  }
+}
