@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZAIKAA</title>
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <div class="img">
+                <img class="dropbtn" src="Display.png" alt="">
+
+            </div>
+            <div class="link">
+                <button type="button"><a href="cart.html">go to cart</a></button>
+
+            </div>
+        </div>
+        <center><h1>Featured Items</h1></center>
+    
+    <div id = "container">
+        <div class="menu-item">
+            <div class = "img">
+                <img src="pizza.avif" alt="pizza">
+            </div>
+            <div class = "menu-details">
+                <div class = "item-name">Cheese Pizza</div>
+                <div class = "item-price">$10</div>
+                <button class = "btn" onclick="addToCart('Cheese Pizza',10)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class = "menu-item">
+            <div class = "img">
+                <img src="salad.avif" alt="salad">
+            </div>
+            <div class = "menu-details">
+                <div class = "item-name">Greek Salad</div>
+                <div class="item-price">$5</div>
+                <button class = "btn"  onclick="addToCart('Greed Salad ',5)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="img">
+                <img src="donut.avif" alt="donut">
+            </div>
+            <div class="menu-details">
+                <div class="item-name">Donut</div>
+                <div class="item-price">$2</div>
+                <button class = "btn" onclick="addToCart('Donut ',2)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <center><h1 >Drinks</h1></center>
+    <div id = "container">
+        <div class="menu-item">
+            <div class = "img">
+                <img src="cocacola.avif" alt="coke">
+            </div>
+            <div class = "menu-details">
+                <div class = "item-name">Coke</div>
+                <div class = "item-price">$3</div>
+                <button class = "btn" onclick="addToCart('Coke ',3)" >Add To Cart</button>
+            </div>
+        </div>
+
+        <div class = "menu-item">
+            <div class = "img">
+                <img src="sprite.avif" alt="sprite">
+            </div>
+            <div class = "menu-details">
+                <div class = "item-name">Sprite</div>
+                <div class="item-price">$3</div>
+                <button class = "btn" onclick="addToCart('Sprite ',3)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="img">
+                <img src="fanta.jpeg"  alt="Fanta">
+            </div>
+            <div class="menu-details">
+                <div class="item-name">Fanta</div>
+                <div class="item-price">$3</div>
+                <button class = "btn" onclick="addToCart('Fanta ',3)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sticky footer -->
+
+    <div class="stickyfooter">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li> <a href="About.html">About</a></li>
+          <li><a href="Section.html">Responses</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+    <!-- sticky footer -->
+
+
+<script>
+
+
+const navEntry = performance.getEntriesByType("navigation")[0];
+  const isReload = navEntry && navEntry.type === "reload";
+
+  if (isReload) {
+    sessionStorage.removeItem("cart");
+    sessionStorage.removeItem("feesAdded");
+  }
+
+  function addToCart(name, price) {
+    // Re-fetch the latest cart & feesAdded from sessionStorage each time
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    let feesAdded = sessionStorage.getItem("feesAdded") === "true";
+
+    // Add delivery and platform fee only once
+    if (!feesAdded) {
+      cart.push({ name: "Delivery Charge", price: 2 });
+      cart.push({ name: "Platform Fee", price: 1 });
+      sessionStorage.setItem("feesAdded", "true");
+    }
+
+    cart.push({ name, price });
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(`${name} added to cart!`);
+
+
+
+
+
+
+
+
+
+
+
+// error when at a time multi item select
+
+//   // Use new method to detect refresh
+//   const navEntry = performance.getEntriesByType("navigation")[0];
+//   const isReload = navEntry && navEntry.type === "reload";
+
+//   if (isReload) {
+//     sessionStorage.removeItem("cart");
+//     sessionStorage.removeItem("feesAdded");
+//   }
+
+//   let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+//   let feesAdded = sessionStorage.getItem("feesAdded") === "true";
+
+//   function addToCart(name, price) {
+//     // Add delivery and platform fee only once per session
+//     if (!feesAdded) {
+//       cart.push({ name: "Delivery Charge", price: 2 });
+//       cart.push({ name: "Platform Fee", price: 1 });
+//       sessionStorage.setItem("feesAdded", "true");
+//     }
+
+//     cart.push({ name, price });
+//     sessionStorage.setItem("cart", JSON.stringify(cart));
+
+//     alert(`${name} added to cart!`);
+
+
+
+
+
+
+
+
+
+//
+//Check if page was reloaded
+//  if (performance.navigation.type === 1) {
+//       // Full refresh → clear cart and flag
+//       sessionStorage.removeItem("cart");
+//       sessionStorage.removeItem("feesAdded");
+//     }
+
+// let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+// let feesAdded = sessionStorage.getItem("feesAdded") === "true";
+
+// function addToCart(name, price) {
+
+
+//      // Add fees only with the first item
+//      if (!feesAdded) {
+//         cart.push({ name: "Delivery Charge", price: 2 });
+//         cart.push({ name: "Platform Fee", price: 1 });
+//         sessionStorage.setItem("feesAdded", "true");
+//       }
+
+
+//   cart.push({ name, price });
+//   sessionStorage.setItem("cart", JSON.stringify(cart)); // temp storage
+//   alert(name + " added to cart!");
+
+//}
+
+  }
+</script>
+</body>
+</html>

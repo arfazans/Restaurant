@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAIKAA</title>
+
+
+  <style>
+
+
+    body {
+      background-color: #232B2B;
+      color: white;
+    }
+
+    #receipt {
+      margin-top: 1025rem;
+      border: 1px solid #ccc;
+      padding: 0.625rem;
+      display: none;
+    }
+
+    input {
+      margin: 0.312rem 0;
+      display: block;
+    }
+
+    button {
+      margin-top: 0.625rem;
+    }
+
+    .dropdown {
+    width: 100vw;
+    height: 0; /* This prevents the parent from affecting layout */
+
+  
+  }
+  
+  .dropdown .img {
+    position: fixed;
+    top:1.25rem;
+    left: 1.25rem;
+  }
+  
+  .dropdown .img img {
+    max-width: 4rem;
+    max-height: 5rem;
+    cursor: pointer;
+  }
+  
+  .dropdown .link {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  
+  .dropdown .link button {
+    background-color: #c4703f;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  
+  .dropdown .link button:hover{
+    font-family: cursive;
+    font-size: large;
+  }
+  .dropdown .link a {
+    text-decoration: none;
+    color: white;
+  }
+
+  li{
+    list-style: none;
+    text-decoration: none;
+  }
+.heading{
+  margin-bottom: 5rem;
+}
+#receipt{
+  margin-top: 1rem;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="dropdown">
+    <div class="img">
+      <img class="dropbtn" src="Display.png" alt="">
+
+    </div>
+    <div class="link">
+      <button type="button"><a href="menu.html">go to Menu</a></button>
+      <button type="button"><a href="index.html">go to Home</a></button>
+
+    </div>
+  </div>
+  <center>
+    <h1 class="heading">My Cart</h1>
+    <div id="cart-items"></div>
+    
+    
+    <div id="user-info" style="display:none;">
+      <h3>Enter Your Details</h3>
+      <input type="text" id="address" placeholder="Enter your address" required>
+      <input type="number" id="mobile" placeholder="Enter your mobile number" required>
+      <button onclick="payNow()">Pay</button>
+    </div>
+    
+    <div id="receipt"></div>
+    
+    
+  </center>
+
+
+  <script>
+    const cartItems = JSON.parse(sessionStorage.getItem("cart")) || [];
+    const cartDiv = document.getElementById("cart-items");
+    const userInfoDiv = document.getElementById("user-info");
+    const receiptDiv = document.getElementById("receipt");
+
+    if (cartItems.length === 0) {
+      cartDiv.innerHTML = "<p>Cart is empty.</p>";
+    } else {
+      let total = 0;
+
+      let html = "<ul>";
+      cartItems.forEach(item => {
+        html += `<li>${item.name} - $${item.price}</li>`;
+        total += item.price;
+
+      });
+      html += `</ul><p><strong>Total: $${total}</strong></p>`;
+      cartDiv.innerHTML = html;
+      userInfoDiv.style.display = "block";
+
+    }
+
+
+    function payNow() {
+      const address = document.getElementById("address").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+
+      if (address === "" || mobile === "") {
+        alert("Please fill in both address and mobile number.");
+        return;
+      }
+
+      alert("Order Successful! A confirmation will be sent to " + mobile);
+
+      // Show mock receipt
+      let receipt = "<h3>Order Receipt</h3><ul>";
+      let total = 0;
+      cartItems.forEach(item => {
+        receipt += `<li>${item.name} - $${item.price}</li>`;
+        total += item.price;
+      });
+      receipt += `</ul><p><strong>Total Paid: $${total}</strong></p>`;
+      receipt += `<p><strong>Delivery to:</strong> ${address}</p>`;
+      receipt += `<p><strong>Contact:</strong> ${mobile}</p>`;
+
+      receiptDiv.innerHTML = receipt;
+      receiptDiv.style.display = "block";
+
+      // Clear cart
+      sessionStorage.removeItem("cart");
+      sessionStorage.removeItem("feesAdded");
+    }
+  </script>
+</body>
+
+</html>
