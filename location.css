@@ -10,8 +10,6 @@ body {
 .dropdown {
     width: 100vw;
     height: 0; /* This prevents the parent from affecting layout */
-  
-  
   }
   
   .dropdown .img {
