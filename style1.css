@@ -26,7 +26,9 @@ body{
   text-align: center;
   color: white;
   text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  /* margin: 4rem 0 3rem 0; */
 }
+
 
 #boxes{
   display: flex;
@@ -102,9 +104,15 @@ input{
   font-size: larger;
   width: 8rem;
   align-self: center;
+  text-align: center;
+  padding: 0.6rem;
+  background-color: #c4703f;
+  color: white;
+  cursor: pointer;
 }
 #btn:hover{
   font-size: x-large;
+  font-family: cursive;
 }
 
 

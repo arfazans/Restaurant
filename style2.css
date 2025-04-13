@@ -4,17 +4,47 @@ body , html{
     font-family: 'Open Sans', sans-serif;
 }
 
-.dropdown img{
+.dropdown {
+  width: 100vw;
+  height: 0; /* This prevents the parent from affecting layout */
+
+
+}
+
+.dropdown .img {
+  position: fixed;
+  top:1.25rem;
+  left: 1.25rem;
+}
+
+.dropdown .img img {
   max-width: 4rem;
   max-height: 5rem;
   cursor: pointer;
-  margin: 0.5rem 0 0 0.5rem;
-  position: fixed;
-  /* border-radius: 4rem; */
-  padding-top: 1rem;
-  padding-left: 1rem;
-  z-index: 100;
 }
+
+.dropdown .link {
+  position: fixed;
+  top: 1.50rem;
+  right: 1.25rem;
+}
+
+.dropdown .link button {
+  background-color: #c4703f;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.dropdown .link button:hover{
+  font-family: cursive;
+  font-size: large;
+}
+.dropdown .link a {
+  text-decoration: none;
+  color: white;
+}
+
+
 
 #about-container{
   /* background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
