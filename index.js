@@ -49,3 +49,8 @@ const navEntry = performance.getEntriesByType("navigation")[0];
 
     alert(`${name} added to cart!`);
   }
+
+
+function handleSubmit(){
+  alert("Thanks For Your Submission");
+ }
