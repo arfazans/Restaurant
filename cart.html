@@ -1,14 +1,11 @@
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZAIKAA</title>
   <link rel="icon" type="image/png" href="footerlogo.png">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #1e1e1e;
@@ -16,7 +13,6 @@
       margin: 0;
       padding: 2rem;
     }
-
     .container {
       max-width: 600px;
       margin: auto;
@@ -25,18 +21,15 @@
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-
     .logo {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 2rem;
     }
-
     .logo img {
       width: 60px;
     }
-
     .logo .nav-buttons button {
       background-color: #c4703f;
       border: none;
@@ -47,28 +40,23 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     .logo .nav-buttons button:hover {
       background-color: #e08248;
     }
-
     h1,
     h3 {
       text-align: center;
     }
-
     ul {
       padding-left: 0;
       list-style-type: none;
     }
-
     li {
       background-color: #3a3d41;
       margin: 0.5rem 0;
       padding: 0.75rem 1rem;
       border-radius: 10px;
     }
-
     input {
       width: 100%;
       padding: 0.75rem;
@@ -76,7 +64,6 @@
       border-radius: 8px;
       border: none;
     }
-
     button {
       padding: 0.75rem 1.5rem;
       margin-top: 1rem;
@@ -87,11 +74,9 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     button:hover {
       background-color: #e08248;
     }
-
     #receipt {
       margin-top: 2rem;
       background-color: #3a3d41;
@@ -101,7 +86,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div class="logo">
@@ -111,26 +95,21 @@
         <button onclick="location.href='index.html'">Go to Home</button>
       </div>
     </div>
-
     <h1>My Cart</h1>
     <div id="cart-items"></div>
-
     <div id="user-info" style="display:none;">
       <h3>Enter Your Details</h3>
       <input type="text" id="address" placeholder="Enter your address" required>
       <input type="number" id="mobile" placeholder="Enter your mobile number" required >
       <button onclick="payNow()">Pay</button>
     </div>
-
     <div id="receipt"></div>
   </div>
-
   <script>
     const cartItems = JSON.parse(sessionStorage.getItem("cart")) || [];
     const cartDiv = document.getElementById("cart-items");
     const userInfoDiv = document.getElementById("user-info");
     const receiptDiv = document.getElementById("receipt");
-
     if (cartItems.length === 0) {
       cartDiv.innerHTML = "<p>Your cart is empty.</p>";
     } else {
@@ -144,18 +123,14 @@
       cartDiv.innerHTML = html;
       userInfoDiv.style.display = "block";
     }
-
     function payNow() {
       const address = document.getElementById("address").value.trim();
       const mobile = document.getElementById("mobile").value.trim();
-
       if (address === "" || mobile === "") {
         alert("Please fill in both address and mobile number.");
         return;
       }
-
       alert("Order Successful! A confirmation will be sent to " + mobile);
-
       let receipt = "<h3>Order Receipt</h3><ul>";
       let total = 0;
       cartItems.forEach(item => {
@@ -165,14 +140,11 @@
       receipt += `</ul><p><strong>Total Paid: $${total}</strong></p>`;
       receipt += `<p><strong>Delivery to:</strong> ${address}</p>`;
       receipt += `<p><strong>Contact:</strong> ${mobile}</p>`;
-
       receiptDiv.innerHTML = receipt;
       receiptDiv.style.display = "block";
-
       sessionStorage.removeItem("cart");
       sessionStorage.removeItem("feesAdded");
     }
   </script>
 </body>
-
 </html>

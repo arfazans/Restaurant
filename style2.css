@@ -3,38 +3,30 @@ body , html{
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-
 .dropdown {
   width: 100vw;
   height: 0; /* This prevents the parent from affecting layout */
-
-
 }
-
 .dropdown .img {
   position: fixed;
   top:1.25rem;
   left: 1.25rem;
 }
-
 .dropdown .img img {
   max-width: 4rem;
   max-height: 5rem;
   cursor: pointer;
 }
-
 .dropdown .link {
   position: fixed;
   top: 1.50rem;
   right: 1.25rem;
 }
-
 .dropdown .link button {
   background-color: #c4703f;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
-
 .dropdown .link button:hover{
   font-family: cursive;
   font-size: large;
@@ -43,9 +35,6 @@ body , html{
   text-decoration: none;
   color: white;
 }
-
-
-
 #about-container{
   /* background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
   background-color: #232B2B;
@@ -65,8 +54,6 @@ body , html{
     flex-direction: column;
     gap: 5rem;
 }
-
-
 #about-content{
     width: 50vw;
     color: white;
@@ -78,7 +65,6 @@ body , html{
   padding: 2rem 2rem 2rem 2rem;
   /* margin: 2rem 0 5rem 10rem; */
 }
-
 #about-content p{
     line-height: 1.5;
     font-size: 20px;
@@ -94,13 +80,10 @@ body , html{
   padding: 2rem 2rem 2rem 2rem;
   /* margin: 2rem 0 5rem 30rem; */
 }
-
 #about-content2 p{
     line-height: 1.5;
     font-size: 20px;
 }
-
-
 .stickyfooter{
     width: 100vw;
     height: 2.5rem;
@@ -119,7 +102,6 @@ body , html{
     list-style: none;
     height: 100%; /* Aligns items vertically in the footer */
 }
-
   .stickyfooter ul li{
     text-decoration: none;
     list-style: none;
@@ -136,7 +118,6 @@ body , html{
     font-size: x-large;
     color: white;
   }
-
   /* @media screen and (min-width:500px) {
     #about-container{
       display: flex;
@@ -145,9 +126,7 @@ body , html{
       gap: 5rem;
       flex-direction: column;
     }
-
     #about-content{
       max-width: 80vw;
-
     }
   } */

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZAIKAA </title>
     <link rel="icon" type="image/png" href="footerlogo.png">
-
-
-
     <style>
         *{
             margin: 0;
@@ -15,13 +12,11 @@
         }
         body{
           background-color: #232B2B;
-
         }
         .container {
             width: 100vw;
             margin: auto;
             padding: 1.25rem;
-
         }
         .message-box {
             border: 1px solid #ccc;
@@ -29,7 +24,6 @@
             margin-bottom: 0.5rem;
             border-radius: 0.25rem;
             background-color: #c4b3a9;
-
         }
         h2{
           text-align: center;
@@ -37,7 +31,6 @@
           margin-bottom: 1rem;
           color: white;
         }
-
         .stickyfooter{
   width: 100%;
   height: 2.5rem;
@@ -46,7 +39,6 @@
   position: fixed;
   bottom: 0;
   z-index: 10;
-  
 }
 .stickyfooter ul {
   display: flex;
@@ -57,7 +49,6 @@
   list-style: none;
   height: 100%; /* Aligns items vertically in the footer */
 }
-
 .stickyfooter ul li{
   text-decoration: none;
   list-style: none;
@@ -72,8 +63,6 @@
   font-size: larger;
   color: white;
 }
-
-
     </style>
 </head>
 <body>
@@ -81,7 +70,6 @@
         <h2>User Responses</h2>
         <div id="messageContainer"></div>
     </div>
-
     <div class="stickyfooter">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -90,21 +78,16 @@
           <li><a href="Contact.html">Contact Us</a></li>
         </ul>
       </div>
-
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let responses = JSON.parse(localStorage.getItem("responses")) || [];
             let container = document.getElementById("messageContainer");
-
             // Clear container before rendering
             container.innerHTML = "";
-
             // Loop through responses and create a message box for each entry
             responses.forEach((response, index) => {
                 let messageBox = document.createElement("div");
                 messageBox.classList.add("message-box");
-
                 messageBox.innerHTML = `
                     <h3>Response ${index + 1}</h3>
                     <p><strong>Name:</strong> ${response.firstname} ${response.lastname}</p>
@@ -113,7 +96,6 @@
                     <p><strong>Message:</strong> ${response.message}</p>
                     <hr>
                 `;
-
                 container.appendChild(messageBox);
             });
         });
