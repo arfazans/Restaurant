@@ -6,6 +6,8 @@ body , html{
 .dropdown {
   width: 100vw;
   height: 0; /* This prevents the parent from affecting layout */
+  /* display: flex;
+  justify-content: space-between; */
 }
 .dropdown .img {
   position: fixed;
@@ -22,31 +24,137 @@ body , html{
   top: 1.50rem;
   right: 1.25rem;
 }
-.dropdown .link button {
-  background-color: #c4703f;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+
+
+
+/* From Uiverse.io by mrhyddenn */
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
 }
-.dropdown .link button:hover{
-  font-family: cursive;
-  font-size: large;
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
 }
-.dropdown .link a {
-  text-decoration: none;
-  color: white;
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
 }
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
 #about-container{
-  /* background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
   background-color: #232B2B;
   background-size: cover;
   background-position: center;
-  /* position: absolute; */
-  /* top: 0; */
   filter: contrast(1.1);
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* display: inline-block; */
     padding: 5rem 0 5rem 0;
     display: flex;
     justify-content: center;
@@ -63,7 +171,6 @@ body , html{
   height: max-content;
   text-align: center;
   padding: 2rem 2rem 2rem 2rem;
-  /* margin: 2rem 0 5rem 10rem; */
 }
 #about-content p{
     line-height: 1.5;
@@ -78,7 +185,6 @@ body , html{
   height: max-content;
   text-align: center;
   padding: 2rem 2rem 2rem 2rem;
-  /* margin: 2rem 0 5rem 30rem; */
 }
 #about-content2 p{
     line-height: 1.5;
@@ -118,15 +224,4 @@ body , html{
     font-size: x-large;
     color: white;
   }
-  /* @media screen and (min-width:500px) {
-    #about-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5rem;
-      flex-direction: column;
-    }
-    #about-content{
-      max-width: 80vw;
-    }
-  } */
+  

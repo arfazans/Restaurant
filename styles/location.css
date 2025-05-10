@@ -3,7 +3,7 @@
 }
 body {
     color: #333;
-    background-image:url('locationbg.avif');
+    background-image:url('/images/locationbg.avif');
 }
 .dropdown {
     width: 100vw;
