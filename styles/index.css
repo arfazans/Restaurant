@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  background-image: url('/images/homebackground.jpg');
+  background-image: url('images/homebackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -358,7 +358,7 @@ header {
 }
 
 .photo1 {
-  background-image: url(/images/nargiskofta.JPG);
+  background-image: url(images/nargiskofta.JPG);
   width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
@@ -368,7 +368,7 @@ header {
 }
 
 .photo2 {
-  background-image: url(/images/chickenqorma.webp);
+  background-image: url(images/chickenqorma.webp);
   width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
@@ -378,7 +378,7 @@ header {
 }
 
 .photo3 {
-  background-image: url(/images/vegetablebiryani.webp);
+  background-image: url(images/vegetablebiryani.webp);
   width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
@@ -388,7 +388,7 @@ header {
 }
 
 .photo4 {
-  background-image: url(/images/4.jpg);
+  background-image: url(images/4.jpg);
   width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
@@ -398,7 +398,7 @@ header {
 }
 
 .photo5 {
-  background-image: url(/images/5.jpg);
+  background-image: url(images/5.jpg);
   width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
