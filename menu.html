@@ -4,19 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ZAIKAA</title>
+        <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/style4.css">
         <link rel="icon" type="image/png" href="images/footerlogo.png">
     </head>
     <body>
-        <div class="dropdown">
-            <div class="img">
-                <img class="dropbtn" src="images/Display.png" alt="">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="images/Display.png" alt="ZAIKAA Logo">
             </div>
-            <div class="link">
-                <button type="button"><a href="cart.html">go to cart</a></button>
+            <div class="nav-links">
+                <a href="cart.html" class="btn-primary">Cart</a>
+                <a href="index.html" class="btn-primary">Home</a>
             </div>
-        </div>
-        <center><h1>Featured Items</h1></center>
+        </nav>
+        <h1 class="section-title">Featured Items</h1>
     <div id = "container">
         <div class="menu-item">
             <div class = "img">
@@ -25,7 +27,7 @@
             <div class = "menu-details">
                 <div class = "item-name">Cheese Pizza</div>
                 <div class = "item-price">$10</div>
-                <button class = "btn" onclick="addToCart('Cheese Pizza',10)">Add To Cart</button>
+                <button class = "btn-primary" onclick="addToCart('Cheese Pizza',10)">Add To Cart</button>
             </div>
         </div>
         <div class = "menu-item">
@@ -35,7 +37,7 @@
             <div class = "menu-details">
                 <div class = "item-name">Greek Salad</div>
                 <div class="item-price">$5</div>
-                <button class = "btn"  onclick="addToCart('Greed Salad ',5)">Add To Cart</button>
+                <button class = "btn-primary"  onclick="addToCart('Greek Salad',5)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -45,11 +47,11 @@
             <div class="menu-details">
                 <div class="item-name">Donut</div>
                 <div class="item-price">$2</div>
-                <button class = "btn" onclick="addToCart('Donut ',2)">Add To Cart</button>
+                <button class = "btn-primary" onclick="addToCart('Donut ',2)">Add To Cart</button>
             </div>
         </div>
     </div>
-    <center><h1 >Drinks</h1></center>
+    <h1 class="section-title">Drinks</h1>
     <div id = "container">
         <div class="menu-item">
             <div class = "img">
@@ -58,7 +60,7 @@
             <div class = "menu-details">
                 <div class = "item-name">Coke</div>
                 <div class = "item-price">$3</div>
-                <button class = "btn" onclick="addToCart('Coke ',3)" >Add To Cart</button>
+                <button class = "btn-primary" onclick="addToCart('Coke ',3)" >Add To Cart</button>
             </div>
         </div>
         <div class = "menu-item">
@@ -68,7 +70,7 @@
             <div class = "menu-details">
                 <div class = "item-name">Sprite</div>
                 <div class="item-price">$3</div>
-                <button class = "btn" onclick="addToCart('Sprite ',3)">Add To Cart</button>
+                <button class = "btn-primary" onclick="addToCart('Sprite ',3)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -78,11 +80,11 @@
             <div class="menu-details">
                 <div class="item-name">Fanta</div>
                 <div class="item-price">$3</div>
-                <button class = "btn" onclick="addToCart('Fanta ',3)">Add To Cart</button>
+                <button class = "btn-primary" onclick="addToCart('Fanta ',3)">Add To Cart</button>
             </div>
         </div>
     </div>
-    <center><h1 >Burger</h1></center>
+    <h1 class="section-title">Burger</h1>
     <div id="container">
         <div class="menu-item">
             <div class="img">
@@ -91,7 +93,7 @@
             <div class="menu-details">
                 <div class="item-name">Cheeseburger</div>
                 <div class="item-price">$5</div>
-                <button class="btn" onclick="addToCart('Cheeseburger', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Cheeseburger', 5)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -99,7 +101,7 @@
             <div class="menu-details">
                 <div class="item-name">Double Burger</div>
                 <div class="item-price">$6</div>
-                <button class="btn" onclick="addToCart('Double Burger', 6)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Double Burger', 6)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -109,18 +111,18 @@
             <div class="menu-details">
                 <div class="item-name">Veggie Burger</div>
                 <div class="item-price">$4.5</div>
-                <button class="btn" onclick="addToCart('Veggie Burger', 4.5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Veggie Burger', 4.5)">Add To Cart</button>
             </div>
         </div>
     </div>
-    <center><h1>Pizza</h1></center>
+    <h1 class="section-title">Pizza</h1>
     <div id="container">
         <div class="menu-item">
             <div class="img"><img src="images/Pepperoni.jpeg" alt="Pepperoni Pizza"></div>
             <div class="menu-details">
                 <div class="item-name">Pepperoni Pizza</div>
                 <div class="item-price">$8</div>
-                <button class="btn" onclick="addToCart('Pepperoni Pizza', 8)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Pepperoni Pizza', 8)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -128,7 +130,7 @@
             <div class="menu-details">
                 <div class="item-name">Margherita Pizza</div>
                 <div class="item-price">$7</div>
-                <button class="btn" onclick="addToCart('Margherita Pizza', 7)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Margherita Pizza', 7)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -136,18 +138,18 @@
             <div class="menu-details">
                 <div class="item-name">BBQ Chicken Pizza</div>
                 <div class="item-price">$9</div>
-                <button class="btn" onclick="addToCart('BBQ Chicken Pizza', 9)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('BBQ Chicken Pizza', 9)">Add To Cart</button>
             </div>
         </div>
     </div>
-<center><h1>Snacks</h1></center>
+<h1 class="section-title">Snacks</h1>
     <div id="container">
         <div class="menu-item">
             <div class="img"><img src="images/French.jpeg" alt="French Fries"></div>
             <div class="menu-details">
                 <div class="item-name">French Fries</div>
                 <div class="item-price">$2.5</div>
-                <button class="btn" onclick="addToCart('French Fries', 2.5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('French Fries', 2.5)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -155,7 +157,7 @@
             <div class="menu-details">
                 <div class="item-name">Chicken Nuggets</div>
                 <div class="item-price">$4</div>
-                <button class="btn" onclick="addToCart('Chicken Nuggets', 4)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Chicken Nuggets', 4)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
@@ -163,26 +165,26 @@
             <div class="menu-details">
                 <div class="item-name">Onion Rings</div>
                 <div class="item-price">$3</div>
-                <button class="btn" onclick="addToCart('Onion Rings', 3)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Onion Rings', 3)">Add To Cart</button>
             </div>
         </div>
     </div>
-<center><h1>Deserts</h1></center>
+<h1 class="section-title">Desserts</h1>
 <div id="container">
     <div class="menu-item">
         <div class="img"><img src="images/Chocolate Cake.jpeg" alt="Chocolate Cake"></div>
         <div class="menu-details">
             <div class="item-name">Chocolate Cake</div>
             <div class="item-price">$5</div>
-            <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+            <button class="btn-primary" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
         </div>
     </div>
     <div class="menu-item">
-        <div class="img"><img src="images/Vanilla Ice Cream.jpeg alt="Vanilla Ice Cream"></div>
+        <div class="img"><img src="images/Vanilla Ice Cream.jpeg" alt="Vanilla Ice Cream"></div>
         <div class="menu-details">
             <div class="item-name">Vanilla Ice Cream</div>
             <div class="item-price">$3.5</div>
-            <button class="btn" onclick="addToCart('Vanilla Ice Cream', 3.5)">Add To Cart</button>
+            <button class="btn-primary" onclick="addToCart('Vanilla Ice Cream', 3.5)">Add To Cart</button>
         </div>
     </div>
     <div class="menu-item">
@@ -190,92 +192,92 @@
         <div class="menu-details">
             <div class="item-name">Chocolate Brownie</div>
             <div class="item-price">$4</div>
-            <button class="btn" onclick="addToCart('Chocolate Brownie', 4)">Add To Cart</button>
+            <button class="btn-primary" onclick="addToCart('Chocolate Brownie', 4)">Add To Cart</button>
         </div>
     </div>
 </div>
-<center><h1 >Shahi Dishes</h1></center>
+<h1 class="section-title">Shahi Dishes</h1>
     <div id = "container">
         <div class="menu-item">
-            <div class="img"><img src="images/biryani.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/biryani.jpeg" alt="Shahi Biryani"></div>
             <div class="menu-details">
                 <div class="item-name">Shahi Biryani (شاہی بریانی) </div>
                 <div class="item-price">$5</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Shahi Biryani', 5)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/paneer.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/paneer.jpeg" alt="Shahi Paneer"></div>
             <div class="menu-details">
                 <div class="item-name">Shahi Paneer (شاہی پنیز)</div>
                 <div class="item-price">$3</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Shahi Paneer', 3)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/korma.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/korma.jpeg" alt="Korma"></div>
             <div class="menu-details">
-                <div class="item-name">Korma (شاہی پنیز)</div>
+                <div class="item-name">Korma (شاہی قورمہ)</div>
                 <div class="item-price">$6</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Korma', 6)">Add To Cart</button>
             </div>
         </div>
     </div>
     <div id="container">
         <div class="menu-item">
-            <div class="img"><img src="images/jarda.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/jarda.jpeg" alt="Shahi Jarda"></div>
             <div class="menu-details">
                 <div class="item-name">Shahi Jarda (شاہی زردہ)</div>
                 <div class="item-price">$4</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Shahi Jarda', 4)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/shahitukra.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/shahitukra.jpeg" alt="Shahi Tukray"></div>
             <div class="menu-details">
                 <div class="item-name">Shahi Tukray (شاہی ٹکڑے) </div>
                 <div class="item-price">$6</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Shahi Tukray', 6)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/haleem.jpeg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/haleem.jpeg" alt="Karachi Haleem"></div>
             <div class="menu-details">
-                <div class="item-name">Karachi-style Haleem (کراچی اسٹائل حلیم)</div>
+                <div class="item-name">Karachi Haleem (کراچی حلیم)</div>
                 <div class="item-price">$10</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Karachi Haleem', 10)">Add To Cart</button>
             </div>
         </div>
     </div>
-    <center><h1 >Foreign Dishes</h1></center>
+    <h1 class="section-title">Foreign Dishes</h1>
     <div id = "container">
         <div class="menu-item">
-            <div class="img"><img src="images/1.jpg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/1.jpg" alt="Calzones"></div>
             <div class="menu-details">
                 <div class="item-name">Calzones (Italian Pizza)</div>
                 <div class="item-price">$15</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Calzones', 15)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/2.jpg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/2.jpg" alt="Tilapia Meunière"></div>
             <div class="menu-details">
                 <div class="item-name">Tilapia Meunière</div>
                 <div class="item-price">$20</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Tilapia Meunière', 20)">Add To Cart</button>
             </div>
         </div>
         <div class="menu-item">
-            <div class="img"><img src="images/3.jpg" alt="Chocolate Cake"></div>
+            <div class="img"><img src="images/3.jpg" alt="Pho Tom"></div>
             <div class="menu-details">
                 <div class="item-name">Pho Tom</div>
                 <div class="item-price">$35</div>
-                <button class="btn" onclick="addToCart('Chocolate Cake', 5)">Add To Cart</button>
+                <button class="btn-primary" onclick="addToCart('Pho Tom', 35)">Add To Cart</button>
             </div>
         </div>
     </div>
     <!-- sticky footer -->
-    <div class="stickyfooter">
+    <div class="sticky-footer">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li> <a href="About.html">About</a></li>

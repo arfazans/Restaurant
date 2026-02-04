@@ -1,144 +1,117 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
-  /* text-align: center; */
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1770);
   background-size: cover;
-}
-.dropdown img{
-  max-width: 4rem;
-  max-height: 5rem;
-  cursor: pointer;
-  margin: 0.5rem 0 0 0.5rem;
-  position: fixed;
-  /* border-radius: 4rem; */
-  padding-top: 1rem;
-  padding-left: 1rem;
-  z-index: 100;
-}
-#head{
-  text-align: center;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
   color: white;
-  text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  /* margin: 4rem 0 3rem 0; */
 }
-#boxes{
+
+#head {
+  text-align: center;
+  padding: 8rem 1rem 3rem 1rem;
+}
+
+#head h1 {
+    font-size: 3rem;
+    color: var(--primary-orange);
+}
+
+#boxes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
- padding-bottom: 3rem;
- margin-bottom: 3rem;
+  padding: 0 1rem 5rem 1rem;
 }
-/* #icon1 , #icon2, #icon3{
-  color: #6e8efb;
-} */
-#container1{
+
+#container1, #container2 {
   padding: 3rem;
-  color: white;
-  width: 20rem;
-  background-color: white;
-  height: max-content;
+  width: 90%;
+  max-width: 450px;
+  background-color: rgba(15, 15, 15, 0.85);
   border: 1px solid rgba(205, 170, 125, 0.4);
-  border-radius: 10%;
-  background-color: rgba(15, 15, 15, 0.75);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(5px);
 }
-#info{
+
+#info {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.5rem;
 }
-#container2{
-  padding: 3rem;
-  width: 20rem;
-  background-color: white;
-  color: white;
-  height: max-content;
-  border-radius: 10%;
-  border: 1px solid rgba(205, 170, 125, 0.4);
-  background-color: rgba(15, 15, 15, 0.75);
+
+#info span {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
-form{
+
+#info i {
+    color: var(--primary-orange);
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
-input{
-  border: none;
-  border-bottom: solid white 1px;
+
+label {
+    font-weight: 600;
+}
+
+input, textarea {
   width: 100%;
-  margin-bottom: 0.7rem;
-  background-color: black ;
-  padding: 0.7rem;
-  box-sizing: border-box;
+  padding: 0.8rem;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--border-radius);
   color: white;
-  border: none;
-  text-align: center;
+  transition: var(--transition);
 }
-#message{
-  border-radius: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    background-color: rgba(255,255,255,0.15);
 }
-#btn{
-  border: none;
-  border-radius: 2rem;
-  /* background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white; */
-  font-size: larger;
-  width: 8rem;
-  align-self: center;
-  text-align: center;
-  padding: 0.6rem;
-  background-color: #c4703f;
-  color: white;
-  cursor: pointer;
+
+#message {
+  min-height: 120px;
+  resize: vertical;
 }
-#btn:hover{
-  font-size: x-large;
-  font-family: cursive;
+
+#btn {
+  width: 100%;
+  margin-top: 1rem;
 }
-.stickyfooter{
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  height: 2.5rem;
-  background-color: #c4703f;
-  padding: 0.5rem;
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
-}
-.stickyfooter ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  height: 100%; /* Aligns items vertically in the footer */
-}
-.stickyfooter ul li{
-  text-decoration: none;
-  list-style: none;
-  color: white;
-}
-.stickyfooter ul li a{
-  text-decoration: none;
-  list-style: none;
-  color: inherit;
-  font-family: cursive;
-  font-size: larger;
-}
-.stickyfooter ul li a:hover{
-  font-size: x-large;
-  color: white;
-}
- @media   (max-width:768px) {
-  #boxes{
-    flex-direction: column;
+
+@media (max-width: 768px) {
+  #head {
+    padding-top: 6rem;
+  }
+  #head h1 {
+    font-size: 2.5rem;
+  }
+  #boxes {
+    gap: 2rem;
+  }
+  #container1, #container2 {
+      padding: 2rem;
   }
 }

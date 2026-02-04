@@ -5,84 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZAIKAA </title>
+  <link rel="stylesheet" href="styles/common.css">
   <link rel="icon" type="image/png" href="images/footerlogo.png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #232B2B;
-    }
-
     .container {
-      width: 100vw;
+      width: 100%;
+      max-width: 800px;
       margin: auto;
-      padding: 1.25rem;
+      padding: 6rem 1.25rem 5rem 1.25rem;
     }
 
     .message-box {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-      border-radius: 0.25rem;
-      background-color: #c4b3a9;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: var(--border-radius);
+      background-color: rgba(255,255,255,0.05);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .message-box h3 {
+        color: var(--primary-orange);
     }
 
     h2 {
       text-align: center;
       padding: 1rem;
       margin-bottom: 1rem;
-      color: white;
-    }
-
-    .stickyfooter {
-      width: 100%;
-      height: 2.5rem;
-      background-color: #c4703f;
-      padding: 0.5rem;
-      position: fixed;
-      bottom: 0;
-      z-index: 10;
-    }
-
-    .stickyfooter ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      height: 100%;
-      /* Aligns items vertically in the footer */
-    }
-
-    .stickyfooter ul li {
-      text-decoration: none;
-      list-style: none;
-      color: white;
-    }
-
-    .stickyfooter ul li a {
-      text-decoration: none;
-      list-style: none;
-      color: inherit;
-    }
-
-    .stickyfooter ul li a:hover {
-      font-size: larger;
-      color: white;
     }
   </style>
 </head>
 
 <body>
+  <nav class="nav-container">
+    <div class="logo">
+      <img src="images/Display.png" alt="ZAIKAA Logo">
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="btn-primary">Home</a>
+    </div>
+  </nav>
   <div class="container">
     <h2>User Responses</h2>
     <div id="messageContainer"></div>
   </div>
-  <div class="stickyfooter">
+  <div class="sticky-footer">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li> <a href="About.html">About</a></li>

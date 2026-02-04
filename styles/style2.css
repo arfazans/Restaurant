@@ -1,227 +1,63 @@
-body , html{
+body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-.dropdown {
-  width: 100vw;
-  height: 0; /* This prevents the parent from affecting layout */
-  /* display: flex;
-  justify-content: space-between; */
-}
-.dropdown .img {
-  position: fixed;
-  top:1.25rem;
-  left: 1.25rem;
-}
-.dropdown .img img {
-  max-width: 4rem;
-  max-height: 5rem;
-  cursor: pointer;
-}
-.dropdown .link {
-  position: fixed;
-  top: 1.50rem;
-  right: 1.25rem;
+    background-color: var(--dark-bg);
 }
 
-
-
-/* From Uiverse.io by mrhyddenn */
-.button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
-  color: #0f1923;
-  cursor: pointer;
-  position: relative;
-  padding: 8px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  transition: all .15s ease;
-}
-
-.button::before,
-.button::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  height: calc(50% - 5px);
-  border: 1px solid #7D8082;
-  transition: all .15s ease;
-}
-
-.button::before {
-  top: 0;
-  border-bottom-width: 0;
-}
-
-.button::after {
-  bottom: 0;
-  border-top-width: 0;
-}
-
-.button:active,
-.button:focus {
-  outline: none;
-}
-
-.button:active::before,
-.button:active::after {
-  right: 3px;
-  left: 3px;
-}
-
-.button:active::before {
-  top: 3px;
-}
-
-.button:active::after {
-  bottom: 3px;
-}
-
-.button_lg {
-  position: relative;
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
-  background-color: #0f1923;
-  overflow: hidden;
-  box-shadow: inset 0px 0px 0px 1px transparent;
-}
-
-.button_lg::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 2px;
-  background-color: #0f1923;
-}
-
-.button_lg::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 4px;
-  height: 4px;
-  background-color: #0f1923;
-  transition: all .2s ease;
-}
-
-.button_sl {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: -1px;
-  left: -8px;
-  width: 0;
-  background-color: #ff4655;
-  transform: skew(-15deg);
-  transition: all .2s ease;
-}
-
-.button_text {
-  position: relative;
-}
-
-.button:hover {
-  color: #0f1923;
-}
-
-.button:hover .button_sl {
-  width: calc(100% + 15px);
-}
-
-.button:hover .button_lg::after {
-  background-color: #fff;
-}
-
-#about-container{
-  background-color: #232B2B;
-  background-size: cover;
-  background-position: center;
-  filter: contrast(1.1);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 5rem 0 5rem 0;
+#about-container {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 8rem 1rem 5rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
 }
-#about-content{
-    width: 50vw;
+
+#about-content, #about-content2 {
+    width: 90%;
+    max-width: 800px;
     color: white;
-    background-color: rgba(15, 15, 15, 0.75);
-    border-radius: 8px;
+    background-color: rgba(15, 15, 15, 0.85);
+    border-radius: var(--border-radius);
     border: 1px solid rgba(205, 170, 125, 0.4);
-  height: max-content;
-  text-align: center;
-  padding: 2rem 2rem 2rem 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(5px);
 }
-#about-content p{
-    line-height: 1.5;
-    font-size: 20px;
+
+#about-content h1, #about-content2 h1 {
+    color: var(--primary-orange);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
-#about-content2{
-    width: 50vw;
-    color: white;
-    background-color: rgba(15, 15, 15, 0.75);
-    border-radius: 8px;
-    border: 1px solid rgba(205, 170, 125, 0.4);
-  height: max-content;
-  text-align: center;
-  padding: 2rem 2rem 2rem 2rem;
+
+#about-content p, #about-content2 p {
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
-#about-content2 p{
-    line-height: 1.5;
-    font-size: 20px;
-}
-.stickyfooter{
-    width: 100vw;
-    height: 2.5rem;
-    background-color: #c4703f;
-    padding: 0.5rem;
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-  }
-  .stickyfooter ul {
+
+.social-links {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 100%; /* Aligns items vertically in the footer */
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
-  .stickyfooter ul li{
-    text-decoration: none;
-    list-style: none;
-    color: white;
-  }
-  .stickyfooter ul li a{
-    text-decoration: none;
-    list-style: none;
-    color: inherit;
-    font-family: cursive;
-    font-size: larger;
-  }
-  .stickyfooter ul li a:hover{
-    font-size: x-large;
-    color: white;
-  }
-  
+
+@media (max-width: 768px) {
+    #about-content, #about-content2 {
+        padding: 1.5rem;
+    }
+
+    #about-content h1, #about-content2 h1 {
+        font-size: 2rem;
+    }
+
+    #about-container {
+        padding-top: 6rem;
+    }
+}
